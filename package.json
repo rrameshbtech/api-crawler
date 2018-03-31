@@ -1,0 +1,9 @@
+{
+  "name": "api-crawler",
+  "version": "1.0.0",
+  "description": "tool to fetch data from api based on the given settings",
+  "main": "run.js",
+  "repository": "https://github.com/rrameshbtech/api-crawler.git",
+  "author": "Ramesh Ramalingam",
+  "license": "Apache"
+}
