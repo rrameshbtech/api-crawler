@@ -1,11 +1,30 @@
 [
   {
-    "partNumber": 123
+    "partNumber": "GRM155R71H103KA88D",
+    "quantity":50
   },
   {
-    "partNumber": 321
+    "partNumber": "GRM155R71A104KA01D",
+    "quantity":50
   },
   {
-    "partNumber": 231
+    "partNumber": "GRM21BR71C105KA01L",
+    "quantity":50
+  },
+  {
+    "partNumber": "24LC256-I/SN",
+    "quantity":50
+  },
+  {
+    "partNumber": "PNM0805E5001BST5",
+    "quantity":50
+  },
+  {
+    "partNumber": "999-11-110-10-000000",
+    "quantity": 50
+  },
+  {
+    "partNumber": "T491B226K016AT",
+    "quantity":50
   }
 ]

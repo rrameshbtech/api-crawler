@@ -1,12 +1,22 @@
-const TaskManager = require('./task-manager/task-manager');
-const APIBuilder = require('./builder/api-builder');
+const RequestManager = require('./request-manager/request-manager');
+const APIGenerator = require('./apis/api-generator');
+const DataStore = require('./db/data-store');
 
-(function(taskManager, apiBuilder) {
-  console.info('Stating api crawler to fetch data...');
+(function (requestManager, apiGen, dataStore) {
+  console.info('Starting api crawler to fetch data...');
+  const config = require('./config.json');
 
-  while(taskManager.hasNextTask()) {
-    
-    taskManager.pop()
-  }
+  const apiClients = apiGen.getClients(config.apis);
+  const requestPipe = requestManager.getRequestPipe();
   
-})(TaskManager(), APIBuilder());
+  apiClients.map(apiClient => {
+    apiClient.consume(requestPipe);
+
+    apiClient.getOutputPipe()
+    .subscribe((value) => {
+        dataStore.write(value);
+      }
+    );
+  });
+
+})(RequestManager(), APIGenerator(), DataStore());

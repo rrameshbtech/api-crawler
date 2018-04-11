@@ -1,3 +1,6 @@
+const Observable = require('rxjs/Observable').Observable;
+require("rxjs/add/observable/of");
+
 const tasks = require('../data/tasks.json');
 
 module.exports = function TaskManager() {
@@ -6,12 +9,12 @@ module.exports = function TaskManager() {
     return tasks.length > 0;
   }
 
-  function pop() {
-    return tasks.pop();
+  function getRequestPipe() {
+    return Observable.of(...tasks);
   }
 
   return {
     hasNextTask,
-    pop
+    getRequestPipe
   };
 };

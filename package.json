@@ -5,5 +5,8 @@
   "main": "run.js",
   "repository": "https://github.com/rrameshbtech/api-crawler.git",
   "author": "Ramesh Ramalingam",
-  "license": "Apache"
+  "license": "Apache",
+  "dependencies": {
+    "rxjs": "^5.5.8"
+  }
 }

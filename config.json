@@ -1,0 +1,22 @@
+{
+  "apis": [{
+    "delay": 1000,
+    "type": "rest-with-key",
+    "extractorType": "multi-response-match",
+    "url": "http://api.element14.com//catalog/products",
+    "queryString": "term=manuPartNum:{partNumber}&storeInfo.id=www.newark.com&resultsSettings.offset=0&resultsSettings.numberOfResults=1&resultsSettings.refinements.filters=&resultsSettings.responseGroup=prices&callInfo.omitXmlSchema=false&callInfo.callback=&callInfo.responseDataFormat=json&callinfo.apiKey={apiKey}",
+    "apiKey": "qf8j5d9j9x8psaanctj872yn",
+    "minInterval": 1000
+  },
+  {
+    "delay": 1000,
+    "type": "rest-with-body",
+    "extractorType": "multi-response-match",
+    "url": "http://api.arrow.com/itemservice/v3/en/search/token",
+    "queryString": "",
+    "apiKey": "d03f4439fd9581fa7391bc0acc103bb80a0e16689c0ba7210aa3ab1d43111fb9",
+    "login": "pactroninc",
+    "minInterval": 1000
+  }
+]
+}
