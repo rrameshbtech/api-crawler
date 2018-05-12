@@ -15,11 +15,11 @@ module.exports = function APIBuilder(apiConfig) {
       'method': taskRequestBuilder.getMethod()
     };
 
-    if(getHeaders()) {
+    if(taskRequestBuilder.getHeaders()) {
       apiObject["headers"] = taskRequestBuilder.getHeaders();
     }
 
-    if(getPayload()) {
+    if(taskRequestBuilder.getPayload()) {
       apiObject["data"] = taskRequestBuilder.getPayload();
     }
 

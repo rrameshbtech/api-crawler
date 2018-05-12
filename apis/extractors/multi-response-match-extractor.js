@@ -14,7 +14,7 @@ module.exports = function MultiResponseExtractor() {
     }
 
     let productPrice = 0;
-    pathToData.reduce((fetchedResponse, path) => fetchedResponse[path], response)    
+    pathToData.reduce((fetchedResponse, path) => fetchedResponse[path], response)
     .filter(p => p[fieldToConfirm] === request.partNumber)
       .some((product) => {
 
